@@ -132,6 +132,35 @@ virtualbox() {
     echo -e "\n ✔ $GREEN A reboot of your system is required  $RESET \n"
 }
 
+seclist() {
+    echo -e "\n ✔ $GREEN Downloading  Seclist ... $RESET \n"
+    eval apt insatll -y seclist
+}
+
+flameshot() {
+    echo -e "\n ✔ $GREEN Downloading  flameshot ... $RESET \n"
+    eval apt install -y flameshot
+}
+
+golang() {
+    echo -e "\n ✔ $GREEN Installing golang ... $RESET \n"
+    eval apt install -y golang
+    eval echo -e 'export GOPATH=\$HOME/go' >> ~/.zshrc
+    eval echo -e 'export PATH=\$PATH:\$GOPATH/bin' >> ~/.zshrc
+
+    eval echo -e 'export GOPATH=\$HOME/go' >> ~/.bashrc
+    eval echo -e 'export PATH=\$PATH:\$GOPATH/bin' >> ~/.bashrc
+    eval source ~/.bashrc
+}
+
+nodejs() {
+    echo -e "\n ✔ $GREEN Installing Nodejs and npm ... $RESET \n"
+    eval apt insatll -y nodejs
+    eval apt install -y npm
+    eval npm i -g lite-server
+}
+
+
 
 # art
 asciiart=$(base64 -d <<< "ICAgICAgICAgXC4gICBcLiAgICAgIF9fLC0iLS5fXyAgICAgIC4vICAgLi8KICAgICAgIFwuICAgXGAuICBcYC4tJyIiIF8sPSI9Ll8gIiJgLS4nLyAgLicvICAgLi8KICAgICAgICBcYC4gIFxfYC0nJyAgICAgIF8sPSI9Ll8gICAgICBgYC0nXy8gIC4nLwogICAgICAgICBcIGAtJywtLl8gICBfLiAgXyw9Ij0uXyAgLF8gICBfLi0sYC0nIC8KICAgICAgXC4gL2AsLScsLS5fIiIiICBcIF8sPSI9Ll8gLyAgIiIiXy4tLGAtLCdcIC4vCiAgICAgICBcYC0nICAvICAgIGAtLl8gICIgICAgICAgIiAgXy4tJyAgICBcICBgLScvCiAgICAgICAvKSAgICggICAgICAgICBcICAgICwtLiAgICAvICAgICAgICAgKSAgIChcCiAgICAsLSciICAgICBgLS4gICAgICAgXCAgLyAgIFwgIC8gICAgICAgLi0nICAgICAiYC0sCiAgLCdfLl8gICAgICAgICBgLS5fX19fLyAvICBfICBcIFxfX19fLi0nICAgICAgICAgXy5fYCwKIC8sJyAgIGAuICAgICAgICAgICAgICAgIFxfLyBcXy8gICAgICAgICAgICAgICAgLicgICBgLFwKLycgICAgICAgKSAgICAgICAgICAgICAgICAgIF8gICAgICAgICBkZXYtZnJvZyAoICAgICAgIGBcCiAgICAgICAgLyAgIF8sLSciYC0uICAsKyt8VHx8fFR8KysuICAuLSciYC0sXyAgIFwKICAgICAgIC8gLC0nICAgICAgICBcL3xgfGB8YHwnfCd8J3xcLyAgICAgICAgYC0sIFwKICAgICAgLywnICAgICAgICAgICAgIHwgfCB8IHwgfCB8IHwgICAgICAgICAgICAgYCxcCiAgICAgLycgICAgICAgICAgICAgICBgIHwgfCB8IHwgfCAnICAgICAgICAgICAgICAgYFwKICAgICAgICAgICAgICAgICAgICAgICAgYCB8IHwgfCAnCiAgICAgICAgICAgICAgICAgICAgICAgICAgYCB8ICc=")
