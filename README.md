@@ -4,7 +4,7 @@
 
 ```bash 
 
-curl https://raw.githubusercontent.com/dev-frog/fixkali/main/fix.sh | sh
+sudo curl https://raw.githubusercontent.com/dev-frog/fixkali/main/fix.sh | bash
 
 ```
 
