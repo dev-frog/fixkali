@@ -3,8 +3,6 @@
 ## Quick Start
 
 ```bash 
-
-curl https://raw.githubusercontent.com/dev-frog/fixkali/main/fix.sh | sudo bash
-
+sudo curl https://raw.githubusercontent.com/dev-frog/fixkali/main/fix.sh | sudo bash
 ```
 
